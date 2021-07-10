@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    background-color: linen;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    color: maroon;
+    margin-left: 40px;
+    text-align: center;
+    font-size: 50px;
+}
+.boxes-container{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+.box{
+    background-color:aqua;
+    flex-basis: 300px;
+    height: 300px;
+    margin:10px;
+    background-color:{{color}} ;
+}
+
+</style>
+</head>
+<body>
+
+<h1>Welcome!</h1>
+<div class="boxes-container">
+{% for x in range (0, times):%}    
+    <div class="box" >{{ content }}</div>
+{% endfor %}    
+</div>
+
+</body>
+</html>
